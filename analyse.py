@@ -72,17 +72,17 @@ reviews_sorted = sorted(reviews, key=lambda k: k['polarity'])
 
 print "\n\nTOP NEGATIVE REVIEWS"
 negative_review = [d for d in reviews_sorted if d['sentiment'] == 'negative']
-for review in negative_review[0:100]:
+for review in negative_review[0:5]:
     print "id=%d, polarity=%.2f, review=%s" % (review['id'], review['polarity'], review['review'])
 
 print "\n\nTOP POSITIVE REVIEWS"
 positive_review = [d for d in  reviews_sorted if d['sentiment'] == 'positive']
-for review in positive_review[-100:]:
+for review in positive_review[-5:]:
      print "id=%d, polarity=%.2f, review=%s" % (review['id'], review['polarity'], review['review'])
 
 print "\n\nTOP NEUTRAL REVIEWS"
 neutral_review = [d for d in  reviews_sorted if d['sentiment'] == 'neutral']
-for review in neutral_review[0:500]:
+for review in neutral_review[0:5]:
  print "id=%d, polarity=%.2f, review=%s" % (review['id'], review['polarity'], review['review'])
 
 
