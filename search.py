@@ -1,4 +1,6 @@
 from Tkinter import *
+import pandas as pd
+cereal_df = pd.read_csv("demo.csv")
 
 root = Tk()
 
@@ -12,9 +14,7 @@ butt.pack(side=RIGHT)
 fram.pack(side=TOP)
 
 text = Text(root)
-text.insert('1.0','''Search text 
-                   Here
-                  ''')
+text.insert('1.0', cereal_df.head(5))
 text.pack(side=BOTTOM)
 
 
